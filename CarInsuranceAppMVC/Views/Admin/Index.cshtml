@@ -1,0 +1,33 @@
+﻿@using CarInsuranceAppMVC.ViewModels
+@model List<CustomerInfoVm>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customer Information</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var customer in Model)
+            {
+                using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+                {
+                    <input type="hidden" name="Id" value="@customer.Id" />
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            @customer.FirstName
+                        </div>
+                        <div class="col-3">
+                            @customer.LastName
+                        </div>
+                        <div class="col-4">
+                            @customer.EmailAddress
+                        </div>
+                        <div class="col">
+                            $@customer.QuoteIssued
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

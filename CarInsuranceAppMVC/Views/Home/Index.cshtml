@@ -1,0 +1,50 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Fill out the form to get an Estimate</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Insurancequote", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters">
+                    User information
+                    <div class="form-group col-md-12">
+                        <input name="FirstName" type="text" class="form-control col-12" placeholder="First Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="LastName" type="text" class="form-control col-12" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="EmailAddress" type="email" class="form-control col-12" placeholder="Email Address" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="DateofBirth" type="datetime" class="form-control col-12" placeholder="mm/dd/yyyy" />
+                    </div>
+                    Car Information
+                    <div class="form-group col-md-12">
+                        <input name="CarYear" type="text" class="form-control col-12" placeholder="Car Year" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarMake" type="text" class="form-control col-12" placeholder="Car Make" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarModel" type="text" class="form-control col-12" placeholder="Car Model" />
+                    </div>
+                    Have you ever had a DUI?
+                    <div class="form-group col-md-12">
+                        <input name="DUI" type="text" class="form-control col-12" placeholder="Leave blank if you have never had a DUI" />
+                    </div>
+                    Number of speeding tickets
+                    <div class="form-group col-md-12">
+                        <input name="Tickets" type="number" class="form-control col-12" placeholder="Enter a number" />
+                    </div>
+                    Would you like a full coverage plan?
+                    <div class="form-group col-md-12">
+                        <input name="Coverage" type="text" class="form-control col-12" placeholder="Leave blank if you Don't want Full Coverage" />
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
